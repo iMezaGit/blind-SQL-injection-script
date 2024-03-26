@@ -1,14 +1,14 @@
 # blind-SQL-injection-script
 This Python3 script automates SQL injections to web application parameters vulnerable to Boolean-based Blind SQL Injections.
 
-This script does not generate the SQL injection, and do not detect the condition tested. It's purpose is to automate the brute force of each character contained in your query, in order to leak to entire string.
+This script does not generate the SQL injection, and do not detect the condition tested. Its purpose is to automate the brute force of each character contained in your query, in order to leak to entire string.
 
 > [!IMPORTANT]
 > This tool was made for educational purposes, and should not be used on a real target without consent.
 
 ---
 ## Set-up 
-In order to use this script, the library `pwntools` (an exploit development toolkit for python) and python's HTTP requests library, are needed. To install both, you can copy the following commands: 
+In order to use this script, the library `pwntools` (an exploit development toolkit for python) and python's HTTP requests library are needed. To install both, you can copy the following commands: 
 
 ```
 python3 -m pip install --upgrade pwntools
@@ -23,8 +23,8 @@ To use this script you have to adjust certain things within it.
     * Mandatory Cookies
     * Necessary Headers 
 
-    > [!WARNING]
-    > **Do not change** the constant named **ASCII**
+> [!WARNING]
+> **Do not change** the constant named **ASCII**
 
 * **Injection**: Adjust the SQL injection as needed for each specific case. Note that you'll have to use the format:
  `(... ascii(substring(data_to_leak),{place},1) ...) = {char}`
